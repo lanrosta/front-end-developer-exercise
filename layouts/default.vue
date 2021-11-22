@@ -21,4 +21,16 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+/* Reduce the h1 font-size on small displays */
+h1{  
+  @media (max-width: 640px) {
+    font-size: 2rem;
+  }
+}
+
+/* Give the nuxt active menu link a bold font */
+.nuxt-link-exact-active  {
+  font-weight: bold;
+}
+</style>

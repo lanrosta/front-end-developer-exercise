@@ -1,4 +1,4 @@
-export const state = {
+export const state = () => ({
   pricingOptions: [
     {
       name: 'Free',
@@ -38,12 +38,19 @@ export const state = {
     },
   ],
   chosenPlan: null,
-};
+});
 
 export const getters = {
   pricingOptions(state) {
     return state.pricingOptions;
   },
+  chosenPlan(state) {
+    return state.chosenPlan;
+  },
 };
 
-export const mutations = {};
+export const mutations = {
+  setPlan(state, chosenPlan) {
+    state.chosenPlan = chosenPlan
+  }
+};
